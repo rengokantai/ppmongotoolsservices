@@ -18,3 +18,8 @@ q_text.count()
 ```
 q_text = coll.find({'$text':{'$search':'ke'}},{'score':{'$meta':'textScore'}})
 ```
+
+###### 14:21 add a sorting.
+```
+q_text.sort([('score',{'$meta':'textScore'})])
+```
