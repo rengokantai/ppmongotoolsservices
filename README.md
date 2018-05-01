@@ -14,3 +14,7 @@ coll.create_index([("$**","text")])
 q_text = coll.find({'$text':{'$search':'doubt'}})
 q_text.count()
 ```
+ 
+```
+q_text = coll.find({'$text':{'$search':'ke'}},{'score':{'$meta':'textScore'}})
+```
